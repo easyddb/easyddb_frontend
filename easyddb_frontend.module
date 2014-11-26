@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the easyddb_frontend feature.
+ */
+
+include_once 'easyddb_frontend.features.inc';
