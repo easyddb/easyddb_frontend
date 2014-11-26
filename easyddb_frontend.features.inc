@@ -31,6 +31,18 @@ function easyddb_frontend_field_group_info_alter(&$data) {
  * Implements hook_field_default_field_instances_alter().
  */
 function easyddb_frontend_field_default_field_instances_alter(&$data) {
+  if (isset($data['ting_collection-ting_collection-ting_entities'])) {
+    $data['ting_collection-ting_collection-ting_entities']['display']['collection_popup'] = array(
+      'label' => 'hidden',
+      'module' => 'ting',
+      'settings' => array(
+        'hide_primary' => 0,
+        'view_mode' => 'objects_in_popup',
+      ),
+      'type' => 'ting_entities_default',
+      'weight' => 0,
+    ); /* WAS: '' */
+  }
   if (isset($data['ting_object-ting_object-ding_entity_buttons'])) {
     $data['ting_object-ting_object-ding_entity_buttons']['display']['ding_item_viewer_big'] = array(
       'label' => 'hidden',

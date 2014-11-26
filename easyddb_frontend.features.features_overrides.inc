@@ -19,6 +19,16 @@ function easyddb_frontend_features_override_default_overrides() {
   $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|4"] = 'ting_details_classification';
 
   // Exported overrides for: field_instance
+  $overrides["field_instance.ting_collection-ting_collection-ting_entities.display|collection_popup"] = array(
+    'label' => 'hidden',
+    'module' => 'ting',
+    'settings' => array(
+      'hide_primary' => 0,
+      'view_mode' => 'objects_in_popup',
+    ),
+    'type' => 'ting_entities_default',
+    'weight' => 0,
+  );
   $overrides["field_instance.ting_object-ting_object-ding_entity_buttons.display|ding_item_viewer_big"] = array(
     'label' => 'hidden',
     'module' => 'ding_entity',
