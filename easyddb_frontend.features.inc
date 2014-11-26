@@ -15,6 +15,19 @@ function easyddb_frontend_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_field_group_info_alter().
+ */
+function easyddb_frontend_field_group_info_alter(&$data) {
+  if (isset($data['group_ting_right_col_search|ting_object|ting_object|search_result'])) {
+    $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['0'] = 'ting_title'; /* WAS: 'ting_title' */
+    $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['1'] = 'ting_author'; /* WAS: 'ting_series' */
+    $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['2'] = 'ting_abstract'; /* WAS: 'ting_abstract' */
+    $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['3'] = 'ting_series'; /* WAS: 'ting_author' */
+    $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['4'] = 'ting_details_classification'; /* WAS: '' */
+  }
+}
+
+/**
  * Implements hook_field_default_field_instances_alter().
  */
 function easyddb_frontend_field_default_field_instances_alter(&$data) {
@@ -209,6 +222,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'override_title_text' => '',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -223,6 +237,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 1,
@@ -237,6 +252,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 2,
@@ -261,6 +277,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -278,6 +295,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'override_title_text' => '',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -292,6 +310,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 1,
@@ -309,6 +328,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'override_title_text' => '',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 2,
@@ -323,6 +343,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 3,
@@ -350,6 +371,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -367,6 +389,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'override_title_text' => '',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -381,6 +404,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 1,
@@ -403,6 +427,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
           'access' => array(),
           'configuration' => array(),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -420,6 +445,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'override_title_text' => '',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 0,
@@ -449,6 +475,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'reservation_form_id' => 'ding_reservation_reservations_ready_form',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 1,
@@ -478,6 +505,7 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
             'reservation_form_id' => 'ding_reservation_reservations_notready_form',
           ),
           'cache' => array(),
+          'style' => '',
           'css' => array(),
           'extras' => array(),
           'position' => 2,
