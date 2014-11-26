@@ -197,6 +197,222 @@ function easyddb_frontend_field_default_field_instances_alter(&$data) {
 }
 
 /**
+ * Implements hook_default_page_manager_handlers_alter().
+ */
+function easyddb_frontend_default_page_manager_handlers_alter(&$data) {
+  if (isset($data['search_ting_search_panel_context'])) {
+    $data['search_ting_search_panel_context']->conf['display']->content['new-10'] = (object) array(
+          'pid' => 'new-10',
+          'panel' => 'main_content',
+          'type' => 'bibliotek_info',
+          'subtype' => 'bibliotek_info',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'override_title' => 1,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 6,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-11'] = (object) array(
+          'pid' => 'new-11',
+          'panel' => 'right_sidebar',
+          'type' => 'campaign',
+          'subtype' => 'campaign',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'ding_campaign_count' => 3,
+            'ding_campaign_offset' => 0,
+            'context' => array(
+              0 => 'empty',
+              1 => 'empty',
+              2 => 'argument_string_1',
+              3 => 'empty',
+            ),
+            'override_title' => 0,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => '',
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-2'] = (object) array(
+          'pid' => 'new-2',
+          'panel' => 'left_sidebar',
+          'type' => 'search_backends',
+          'subtype' => 'search_backends',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-3'] = (object) array(
+          'pid' => 'new-3',
+          'panel' => 'left_sidebar',
+          'type' => 'ding_facetbrowser',
+          'subtype' => 'ding_facetbrowser',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'override_title' => 1,
+            'override_title_text' => 'Filtrér din søgning',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 1,
+          'locks' => '',
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-4'] = (object) array(
+          'pid' => 'new-4',
+          'panel' => 'main_content',
+          'type' => 'search_backends',
+          'subtype' => 'search_backends',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(),
+          'cache' => array(),
+          'css' => array(
+            'css_id' => '',
+            'css_class' => 'js-mobile-facets',
+          ),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-5'] = (object) array(
+          'pid' => 'new-5',
+          'panel' => 'main_content',
+          'type' => 'ding_facetbrowser',
+          'subtype' => 'ding_facetbrowser',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'override_title' => 1,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'extras' => array(),
+          'position' => 1,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-6'] = (object) array(
+          'pid' => 'new-6',
+          'panel' => 'main_content',
+          'type' => 'search_result_count',
+          'subtype' => 'search_result_count',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'context' => 'argument_string_1',
+            'override_title' => 0,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 2,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-7'] = (object) array(
+          'pid' => 'new-7',
+          'panel' => 'main_content',
+          'type' => 'search_per_page',
+          'subtype' => 'search_per_page',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'select_type' => 'dropdown',
+            'context' => 'argument_string_1',
+            'override_title' => 0,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 3,
+          'locks' => array(),
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-8'] = (object) array(
+          'pid' => 'new-8',
+          'panel' => 'main_content',
+          'type' => 'block',
+          'subtype' => 'ting_search-sort_form',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'override_title' => 1,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 4,
+          'locks' => '',
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->content['new-9'] = (object) array(
+          'pid' => 'new-9',
+          'panel' => 'main_content',
+          'type' => 'search_result',
+          'subtype' => 'search_result',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'type' => 'ting_search',
+            'log' => 0,
+            'override_empty' => 0,
+            'empty_title' => '',
+            'empty' => '',
+            'empty_format' => 'plain_text',
+            'override_no_key' => 0,
+            'no_key_title' => '',
+            'no_key' => '',
+            'no_key_format' => 'plain_text',
+            'context' => 'argument_string_1',
+            'override_title' => 1,
+            'override_title_text' => '',
+          ),
+          'cache' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 5,
+          'locks' => '',
+        ); /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['left_sidebar']['0'] = 'new-2'; /* WAS: 'new-5929c0c7-25f7-4d61-8829-81a740e6f77e' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['left_sidebar']['1'] = 'new-3'; /* WAS: 'new-f5097d22-b99c-49be-a0df-6b45a7d0d83c' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['0'] = 'new-4'; /* WAS: 'new-d6bca0c2-099c-4659-8fcd-69da98dbc7c9' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['1'] = 'new-5'; /* WAS: 'new-41aa51eb-47c2-41e5-b0e5-2606d863b66d' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['2'] = 'new-6'; /* WAS: 'new-f3a42372-e2fb-45e6-a62b-79c707f0a35d' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['3'] = 'new-7'; /* WAS: 'new-47206bf0-1031-456c-9aab-96b659e54d89' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['4'] = 'new-8'; /* WAS: 'new-dd50ebf9-a0f1-499b-b389-49f178f5e242' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['5'] = 'new-9'; /* WAS: 'new-7c02f708-c47f-4eb5-8958-d6279de6ade4' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['main_content']['6'] = 'new-10'; /* WAS: '' */
+    $data['search_ting_search_panel_context']->conf['display']->panels['right_sidebar']['0'] = 'new-11'; /* WAS: 'new-07d2c562-f846-4241-b93f-7c1d723ff29d' */
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-07d2c562-f846-4241-b93f-7c1d723ff29d']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-41aa51eb-47c2-41e5-b0e5-2606d863b66d']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-47206bf0-1031-456c-9aab-96b659e54d89']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-5929c0c7-25f7-4d61-8829-81a740e6f77e']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-7c02f708-c47f-4eb5-8958-d6279de6ade4']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-d6bca0c2-099c-4659-8fcd-69da98dbc7c9']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-dd50ebf9-a0f1-499b-b389-49f178f5e242']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-f3a42372-e2fb-45e6-a62b-79c707f0a35d']);
+    unset($data['search_ting_search_panel_context']->conf['display']->content['new-f5097d22-b99c-49be-a0df-6b45a7d0d83c']);
+    unset($data['search_ting_search_panel_context']->conf['display']->uuid);
+  }
+}
+
+/**
  * Implements hook_default_page_manager_pages_alter().
  */
 function easyddb_frontend_default_page_manager_pages_alter(&$data) {
