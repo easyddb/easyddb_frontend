@@ -24,6 +24,7 @@ function easyddb_frontend_field_group_info_alter(&$data) {
     $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['2'] = 'ting_abstract'; /* WAS: 'ting_abstract' */
     $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['3'] = 'ting_series'; /* WAS: 'ting_author' */
     $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['4'] = 'ting_details_classification'; /* WAS: '' */
+    $data['group_ting_right_col_search|ting_object|ting_object|search_result']->data['children']['5'] = 'ting_more_info'; /* WAS: '' */
   }
 }
 
