@@ -17,6 +17,7 @@ function easyddb_frontend_features_override_default_overrides() {
   $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|2"] = 'ting_abstract';
   $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|3"] = 'ting_series';
   $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|4"] = 'ting_details_classification';
+  $overrides["field_group.group_ting_right_col_search|ting_object|ting_object|search_result.data|children|5"] = 'ting_more_info';
 
   // Exported overrides for: field_instance
   $overrides["field_instance.ting_collection-ting_collection-ting_entities.display|collection_popup"] = array(
