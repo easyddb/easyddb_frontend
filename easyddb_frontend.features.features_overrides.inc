@@ -121,7 +121,7 @@ function easyddb_frontend_features_override_default_overrides() {
     'label' => 'hidden',
     'module' => 'ting_material_details',
     'settings' => array(),
-    'type' => 'ting_details_single',
+    'type' => 'ting_details_linked_dk5',
     'weight' => 20,
   );
   $overrides["field_instance.ting_object-ting_object-ting_series.display|ding_item_viewer_big"] = array(

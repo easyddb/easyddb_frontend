@@ -144,7 +144,7 @@ function easyddb_frontend_field_default_field_instances_alter(&$data) {
       'label' => 'hidden',
       'module' => 'ting_material_details',
       'settings' => array(),
-      'type' => 'ting_details_single',
+      'type' => 'ting_details_linked_dk5',
       'weight' => 20,
     ); /* WAS: '' */
   }
