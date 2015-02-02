@@ -19,10 +19,11 @@ function easyddb_frontend_field_default_field_instances() {
     'ding_entity_type' => 'ding_entity',
     'display' => array(
       'collection_list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'ding_more_info',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'ting_more_info_default',
+        'weight' => 10,
       ),
       'collection_primary' => array(
         'label' => 'above',
