@@ -751,3 +751,17 @@ function easyddb_frontend_default_page_manager_pages_alter(&$data) {
     unset($data['user_reservations']->default_handlers['page_user_reservations_panel_context']->conf['display']->uuid);
   }
 }
+
+/**
+ * Implements hook_wysiwyg_default_profiles_alter().
+ */
+function easyddb_frontend_wysiwyg_default_profiles_alter(&$data) {
+  if (isset($data['ding_wysiwyg'])) {
+    $data['ding_wysiwyg']['settings']['buttons']['default']['Format'] = 1; /* WAS: '' */
+    $data['ding_wysiwyg']['settings']['buttons']['drupal']['dams_audio'] = 1; /* WAS: '' */
+    $data['ding_wysiwyg']['settings']['buttons']['drupal']['dams_document'] = 1; /* WAS: '' */
+    $data['ding_wysiwyg']['settings']['buttons']['drupal']['dams_image'] = 1; /* WAS: '' */
+    $data['ding_wysiwyg']['settings']['buttons']['drupal']['dams_video'] = 1; /* WAS: '' */
+    $data['ding_wysiwyg']['settings']['language'] = 'en'; /* WAS: '' */
+  }
+}
