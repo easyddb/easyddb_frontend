@@ -134,7 +134,6 @@ features[features_overrides][] = wysiwyg.ding_wysiwyg.settings|buttons|drupal|da
 features[features_overrides][] = wysiwyg.ding_wysiwyg.settings|buttons|drupal|dams_image
 features[features_overrides][] = wysiwyg.ding_wysiwyg.settings|buttons|drupal|dams_video
 features[features_overrides][] = wysiwyg.ding_wysiwyg.settings|language
-features[field_base][] = ting_more_info
 features[field_group][] = group_data|ting_object|ting_object|ding_item_viewer_big
 features[field_group][] = group_ting_left_col_collection|ting_object|ting_object|objects_in_popup
 features[field_group][] = group_ting_right_col_collection|ting_object|ting_object|objects_in_popup
