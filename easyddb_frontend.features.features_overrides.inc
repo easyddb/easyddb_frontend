@@ -703,5 +703,13 @@ function easyddb_frontend_features_override_default_overrides() {
   $overrides["page_manager_pages.user_reservations.default_handlers|page_user_reservations_panel_context|conf|display|title_pane"] = 'new-15';
   $overrides["page_manager_pages.user_reservations.default_handlers|page_user_reservations_panel_context|conf|display|uuid"]["DELETED"] = TRUE;
 
+  // Exported overrides for: wysiwyg
+  $overrides["wysiwyg.ding_wysiwyg.settings|buttons|default|Format"] = 1;
+  $overrides["wysiwyg.ding_wysiwyg.settings|buttons|drupal|dams_audio"] = 1;
+  $overrides["wysiwyg.ding_wysiwyg.settings|buttons|drupal|dams_document"] = 1;
+  $overrides["wysiwyg.ding_wysiwyg.settings|buttons|drupal|dams_image"] = 1;
+  $overrides["wysiwyg.ding_wysiwyg.settings|buttons|drupal|dams_video"] = 1;
+  $overrides["wysiwyg.ding_wysiwyg.settings|language"] = 'en';
+
  return $overrides;
 }
